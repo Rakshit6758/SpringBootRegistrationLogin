@@ -8,6 +8,14 @@ pipeline{
 
 	stages {
 
+        stage('Kill') {
+
+			steps {
+				sh 'docker ps -q'
+                sh 'docker images -q'
+			}
+		}
+
 		stage('Build') {
 
 			steps {
