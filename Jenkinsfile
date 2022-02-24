@@ -16,7 +16,21 @@ pipeline{
 			}
 		}
 
-		stage('Build') {
+        stage('Clean') {
+
+			steps {
+				sh 'mvn clean '
+			}
+		}
+
+        stage('Build') {
+
+			steps {
+				sh 'mvn build '
+			}
+		}
+
+		stage('Docker') {
 
 			steps {
 				sh 'docker-compose up'
