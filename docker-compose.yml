@@ -15,7 +15,6 @@ services:
     build: .
     ports:
     - 8080:8080
-    command: mvn clean package
-    exec: mvn clean spring-boot:run
+    command: mvn clean package && mvn clean spring-boot:run
     depends_on:
     - users-mysql
