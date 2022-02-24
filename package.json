@@ -1,31 +1,9 @@
 {
-  "name": "springbootregistrationlogin",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Rakshit6758/SpringBootRegistrationLogin.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.3",
-    "mysql": "^2.9.0",
-    "node-mysql": "^0.4.2",
-    "uuid": "^8.3.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  },
-  "bugs": {
-    "url": "https://github.com/Rakshit6758/SpringBootRegistrationLogin/issues"
-  },
-  "homepage": "https://github.com/Rakshit6758/SpringBootRegistrationLogin#readme"
+    "express-validator": "^6.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3"
+  }
 }
