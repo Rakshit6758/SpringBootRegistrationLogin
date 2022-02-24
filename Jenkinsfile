@@ -8,14 +8,6 @@ pipeline{
 
 	stages {
 
-        stage('Kill') {
-
-			steps {
-				sh 'docker ps -q'
-                sh 'docker images -q'
-			}
-		}
-
         stage('Clean') {
 
 			steps {
@@ -30,10 +22,10 @@ pipeline{
 			}
 		}
 
-		stage('Docker') {
+		stage('Application') {
 
 			steps {
-				sh 'docker-compose up'
+				sh 'mvn spring-boot:run'
 			}
 		}
 
