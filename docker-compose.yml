@@ -8,7 +8,7 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_ROOT_HOST: root
     ports:
-    - "3306:3306"
+    - "3306:3305"
     restart: always
 
   application:
