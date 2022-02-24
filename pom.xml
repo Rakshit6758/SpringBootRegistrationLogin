@@ -83,8 +83,22 @@
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>	
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+            <execution>
+              <id>Build Containers</id>
+              <phase>package</phase>
+              <configuration>
+                     <executable>docker-compose</executable>
+                     <commandlineArgs>build</commandlineArgs>
+                 </configuration>
+              <goals>
+                <goal>exec</goal>
+              </goals>
+            </execution>
+			</executions>	
 			</plugin>
+			
 		</plugins>
 	</build>
 
