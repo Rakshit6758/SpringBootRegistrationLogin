@@ -23,10 +23,10 @@ pipeline{
 			}
 		}
 
-        stage('Build') {
+        stage('Install') {
 
 			steps {
-				sh 'mvn build '
+				sh 'mvn install '
 			}
 		}
 
